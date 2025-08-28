@@ -6,7 +6,7 @@ import React, { useEffect, useState } from "react";
 // - Built-in <style> tag for CSS (no external CSS file required)
 // - Uses live, royalty-free image URLs (Unsplash/Pexels)
 // - Anchor navigation + smooth scrolling
-// - Mobile responsive
+// - Mobile responsive - this all covers the basics for a corporate site.
 
 export default function App() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -172,7 +172,7 @@ export default function App() {
               <a href="#portfolio" className="btn outline">See Our Work</a>
             </div>
             <div className="stats">
-              {[['120+','Enterprise Projects'],['25+','Fortune/Blue‑chip Clients'],['20 yrs','IT Leadership']].map(([n, t]) => (
+              {[['120+','Enterprise Projects'],['25+','Fortune/Blue‑chip Clients'],['25 yrs','IT Leadership']].map(([n, t]) => (
                 <div className="stat" key={t}><b>{n}</b><div style={{color:'var(--muted)'}}>{t}</div></div>
               ))}
             </div>
@@ -291,11 +291,11 @@ export default function App() {
           <div className="grid grid-3" style={{marginTop:'1rem'}}>
             {[
               ['Financial Services','https://images.unsplash.com/photo-1559526324-593bc073d938?q=80&w=1200&auto=format&fit=crop','Payments • Core banking • Risk & AML • Open APIs'],
-              ['Retail & eCommerce','https://images.unsplash.com/photo-1515165562835-c3b8c8aba5f4?q=80&w=1200&auto=format&fit=crop','Omnichannel • Personalization • Supply chain visibility'],
+              ['Retail & eCommerce','https://as1.ftcdn.net/v2/jpg/05/26/53/52/1000_F_526535232_3FG0tckX1I3yAaHqqBeCdt0MVE1A5UQ2.jpg','Omnichannel • Personalization • Supply chain visibility'],
               ['Healthcare & Pharma','https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=1200&auto=format&fit=crop','HL7/FHIR • Patient portals • Data privacy & compliance'],
               ['Public Sector','https://images.unsplash.com/photo-1549923746-c502d488b3ea?q=80&w=1200&auto=format&fit=crop','Citizen services • Digital identity • Secure clouds'],
               ['Telecom','https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1200&auto=format&fit=crop','5G • OSS/BSS • Network analytics'],
-              ['Manufacturing','https://images.unsplash.com/photo-1542168706-78792e3d28b6?q=80&w=1200&auto=format&fit=crop','IoT • MES • Predictive maintenance']
+              ['Manufacturing','https://as1.ftcdn.net/v2/jpg/10/02/59/82/1000_F_1002598222_e94HmXnajs0Gv4L6F7h8GOtWmJliQuH0.jpg','IoT • MES • Predictive maintenance']
             ].map(([title,img,desc]) => (
               <div className="card" key={title}>
                 <img src={img} alt={title} style={{borderRadius:12, marginBottom:12}}/>
@@ -315,7 +315,7 @@ export default function App() {
           <div className="grid grid-3" style={{marginTop:'1rem'}}>
             {[
               {title:'Retail GenAI Support', result:'+27% CSAT • −35% AHT', text:'Built RAG assistant over 120k tickets & manuals with guardrails.', img:'https://images.unsplash.com/photo-1520975916090-3105956dac38?q=80&w=1200&auto=format&fit=crop'},
-              {title:'Banking Cloud Migration', result:'40% cost optim. • 99.95% SLA', text:'Migrated 120 services to AWS with IaC, FinOps & blue/green.', img:'https://images.unsplash.com/photo-1551281044-8a26cf2f87fe?q=80&w=1200&auto=format&fit=crop'},
+              {title:'Banking Cloud Migration', result:'40% cost optim. • 99.95% SLA', text:'Migrated 120 services to AWS with IaC, FinOps & blue/green.', img:'https://as2.ftcdn.net/v2/jpg/16/49/55/31/1000_F_1649553199_7lHDxpfukha3aoMAWMvimGPKVhx9aDyJ.jpg'},
               {title:'Pharma Data Platform', result:'FDA-ready • 10x faster trials', text:'Lakehouse with governed pipelines & lineage dashboards.', img:'https://images.unsplash.com/photo-1581090700227-1e37b190418e?q=80&w=1200&auto=format&fit=crop'}
             ].map(c => (
               <div className="card" key={c.title}>
@@ -337,9 +337,9 @@ export default function App() {
           <div className="grid grid-3" style={{marginTop:'1rem'}}>
             {[
               ['AI Contract Analyzer','https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?q=80&w=1200&auto=format&fit=crop','NLP engine to parse risk clauses; dashboard with review workflows.'],
-              ['IoT Factory Monitor','https://images.unsplash.com/photo-1566241142559-40e1dab06d53?q=80&w=1200&auto=format&fit=crop','Edge telemetry, anomaly detection, and predictive maintenance.'],
+              ['IoT Factory Monitor','https://as1.ftcdn.net/v2/jpg/12/93/23/62/1000_F_1293236203_q4ZDVYykRiE7NxvoI6hg3nVopoSY5Enf.jpg','Edge telemetry, anomaly detection, and predictive maintenance.'],
               ['eCommerce Personalizer','https://images.unsplash.com/photo-1472851294608-062f824d29cc?q=80&w=1200&auto=format&fit=crop','Real‑time recommendations and A/B testing platform.'],
-              ['Cyber Threat Hunter','https://images.unsplash.com/photo-1591696331113-4c4c7e143d83?q=80&w=1200&auto=format&fit=crop','SIEM + SOAR with ML‑driven detections and auto‑response playbooks.'],
+              ['Cyber Threat Hunter','https://as1.ftcdn.net/v2/jpg/08/77/20/48/1000_F_877204893_3VSqWsfRjMDeySKbGShAv3VUzYuFZZg6.jpg','SIEM + SOAR with ML‑driven detections and auto‑response playbooks.'],
               ['Banking Onboarding','https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?q=80&w=1200&auto=format&fit=crop','KYC, e‑sign, workflow automation, and audit trails.'],
               ['Analytics Hub','https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200&auto=format&fit=crop','Warehouse + dashboards for executive insights.']
             ].map(([title,img,desc]) => (
@@ -381,7 +381,7 @@ export default function App() {
       <section className="section" style={{background:'#fff'}}>
         <div className="container grid grid-2">
           <div>
-            <h2>Why Arham?</h2>
+            <h2>Why ArhamTechnologies?</h2>
             <p className="lead">Strategy + Delivery under one roof, led by senior architects with skin in the game.</p>
             <ul className="list">
               <li><b>Senior‑only squads:</b> Staffed with architects & staff+ engineers.</li>
@@ -391,7 +391,7 @@ export default function App() {
             </ul>
           </div>
           <div className="pic">
-            <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1600&auto=format&fit=crop" alt="Team discussion"/>
+            <img style={{borderRadius:'12px'}} src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1600&auto=format&fit=crop" alt="Team discussion"/>
           </div>
         </div>
       </section>
@@ -437,8 +437,8 @@ export default function App() {
           <p className="lead">Simple models for predictable delivery.</p>
           <div className="pricing" style={{marginTop:'1rem'}}>
             {[
-              {name:'Starter', price:'$9,900', period:'/month', features:['One product squad','Up to 2 workstreams','Slack + weekly demos','Basic security & QA']},
-              {name:'Growth', price:'$24,900', period:'/month', features:['Two senior squads','Multi‑cloud & Data','24/5 support','DevSecOps + SRE'], badge:'Most Popular'},
+              {name:'Starter', price:'$', period:'/month', features:['One product squad','Up to 2 workstreams','Slack + weekly demos','Basic security & QA']},
+              {name:'Growth', price:'$', period:'/month', features:['Two senior squads','Multi‑cloud & Data','24/5 support','DevSecOps + SRE'], badge:'Most Popular'},
               {name:'Enterprise', price:'Custom', period:'', features:['Regulated industries','24/7 support','Dedicated architect','On‑site workshops']}
             ].map((p)=> (
               <div className="card price-card" key={p.name}>
@@ -460,9 +460,9 @@ export default function App() {
           <p className="lead">Hands‑on leaders with deep experience in enterprise delivery.</p>
           <div className="grid grid-3" style={{marginTop:'1rem'}}>
             {[
-              ['Yasir Butt','CEO & Chief Architect','https://images.unsplash.com/photo-1607746882042-944635dfe10e?q=80&w=1200&auto=format&fit=crop'],
-              ['A. Khan','Head of Engineering','https://images.unsplash.com/photo-1544006659-f0b21884ce1d?q=80&w=1200&auto=format&fit=crop'],
-              ['S. Ali','Director, Cybersecurity','https://images.unsplash.com/photo-1527980965255-d3b416303d12?q=80&w=1200&auto=format&fit=crop']
+              ['Yasir Butt','Director, Tech Solutions & Cybersecurity','https://as2.ftcdn.net/v2/jpg/08/69/85/85/1000_F_869858569_Q7uUyhCOwHxO0KR1LJyvK3ir0Ce8bz2L.jpg'],
+              ['Lucy Andrew','Chief Technology Officer','https://images.unsplash.com/photo-1607746882042-944635dfe10e?q=80&w=1200&auto=format&fit=crop'],
+              ['A. Khan','Solutions Architect','https://images.unsplash.com/photo-1544006659-f0b21884ce1d?q=80&w=1200&auto=format&fit=crop']
             ].map(([name,role,img]) => (
               <div className="card" key={name}>
                 <img src={img} alt={name} style={{borderRadius:12, marginBottom:12, aspectRatio:'16/9', objectFit:'cover'}}/>
@@ -497,10 +497,10 @@ export default function App() {
       </section>
 
       {/* Careers CTA */}
-      <section className="section" style={{background:'#fff'}}>
+      <section id="careers" className="section">
         <div className="container grid grid-2">
           <div>
-            <h2>Careers at Arham</h2>
+            <h2>Careers at ArhamTechnologies</h2>
             <p className="lead">Join a senior‑first, remote‑friendly team delivering meaningful platforms.</p>
             <ul className="list">
               <li>Principal Engineer (Cloud/Platform)</li>
@@ -509,7 +509,7 @@ export default function App() {
             </ul>
           </div>
           <div className="pic">
-            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1600&auto=format&fit=crop" alt="Laptop and code"/>
+            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1600&auto=format&fit=crop" alt="Laptop and code" style={{borderRadius:12, marginBottom:0}}/>
           </div>
         </div>
       </section>
@@ -533,8 +533,8 @@ export default function App() {
             <div>
               <div className="card">
                 <h3>Head Office</h3>
-                <p>Arham Technologies Ltd<br/>London, United Kingdom · Lahore, Pakistan</p>
-                <p><b>Email:</b> hello@arhamtechnologies.ltd<br/><b>Phone:</b> +44 20 1234 5678</p>
+                <p>Arham Technologies Ltd<br/>Overseas Enclave, Bahria Town, Lahore, Pakistan</p>
+                <p><b>Email:</b> Info@arhamtechnologies.ltd<br/><b>Phone:</b> +92 32 1492 1865</p>
               </div>
               <div className="card" style={{marginTop:'1rem'}}>
                 <h3>FAQ</h3>
