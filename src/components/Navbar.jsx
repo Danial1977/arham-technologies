@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { Bot, Menu, X, ArrowRight, Sun, Moon } from 'lucide-react';
+import { Bot, Menu, X, ArrowRight, Sun, Moon, Database } from 'lucide-react';
 
-export default function Navbar() {
+export default function Navbar({ onOpenDatabase }) {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [theme, setTheme] = useState('light');
@@ -91,6 +91,19 @@ export default function Navbar() {
 
           {/* Action CTA & Theme Indicator */}
           <div className="hidden lg:flex items-center gap-3">
+            {/* Database Portal Button */}
+            {onOpenDatabase && (
+              <button
+                onClick={onOpenDatabase}
+                title="Open Arham Central Database & CRM Console"
+                className="inline-flex items-center gap-2 px-3.5 py-2 rounded-full text-xs font-bold text-slate-800 bg-cyan-50 border border-cyan-200 hover:bg-cyan-100 hover:border-cyan-300 transition-all shadow-sm group"
+              >
+                <Database className="w-3.5 h-3.5 text-cyan-600 group-hover:scale-110 transition-transform" />
+                <span>Database Portal</span>
+                <span className="inline-block w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+              </button>
+            )}
+
             {/* Theme Toggle Button */}
             <button
               onClick={toggleTheme}
@@ -121,6 +134,15 @@ export default function Navbar() {
 
           {/* Mobile Buttons */}
           <div className="flex items-center gap-2 lg:hidden">
+            {onOpenDatabase && (
+              <button
+                onClick={onOpenDatabase}
+                title="Database Portal"
+                className="p-2 rounded-lg bg-cyan-50 border border-cyan-200 text-cyan-700 shadow-sm"
+              >
+                <Database className="w-5 h-5" />
+              </button>
+            )}
             <button
               onClick={toggleTheme}
               className="p-2 rounded-lg bg-white border border-slate-200 text-slate-700 shadow-sm"
@@ -154,7 +176,20 @@ export default function Navbar() {
               </a>
             ))}
           </div>
-          <div className="pt-2">
+          <div className="pt-2 space-y-3">
+            {onOpenDatabase && (
+              <button
+                onClick={() => {
+                  setMobileMenuOpen(false);
+                  onOpenDatabase();
+                }}
+                className="flex items-center justify-center gap-2 w-full py-3 rounded-xl text-sm font-bold text-slate-800 bg-cyan-50 border border-cyan-200 hover:bg-cyan-100 transition-colors shadow-sm"
+              >
+                <Database className="w-4 h-4 text-cyan-600" />
+                <span>Central Database & CRM Console</span>
+                <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+              </button>
+            )}
             <a
               href="#contact"
               onClick={() => setMobileMenuOpen(false)}

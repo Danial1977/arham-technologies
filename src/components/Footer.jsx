@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { Bot, Mail, ArrowRight } from 'lucide-react';
+import { Bot, Mail, ArrowRight, Database } from 'lucide-react';
 import { LinkedinIcon } from './BrandIcons';
 
-export default function Footer() {
+export default function Footer({ onOpenDatabase }) {
   const [subscribed, setSubscribed] = useState(false);
   const [email, setEmail] = useState('');
 
@@ -73,6 +73,17 @@ export default function Footer() {
               <li><a href="#services" className="hover:text-cyan-700 transition-colors">Autonomous AI Agents</a></li>
               <li><a href="#services" className="hover:text-cyan-700 transition-colors">Corporate AI Training</a></li>
               <li><a href="#services" className="hover:text-cyan-700 transition-colors">eCommerce Modernization</a></li>
+              {onOpenDatabase && (
+                <li className="pt-1">
+                  <button 
+                    onClick={onOpenDatabase} 
+                    className="hover:text-cyan-700 transition-colors flex items-center gap-1.5 font-bold text-cyan-700"
+                  >
+                    <Database className="w-3.5 h-3.5" />
+                    <span>Database & CRM Portal</span>
+                  </button>
+                </li>
+              )}
             </ul>
           </div>
 
@@ -139,6 +150,15 @@ export default function Footer() {
             </a> (25+ Years Tech Excellence).
           </div>
           <div className="flex items-center gap-6">
+            {onOpenDatabase && (
+              <button 
+                onClick={onOpenDatabase} 
+                className="hover:text-cyan-700 transition-colors font-semibold text-slate-700 flex items-center gap-1"
+              >
+                <Database className="w-3 h-3 text-cyan-600" />
+                <span>Database Console</span>
+              </button>
+            )}
             <a href="#privacy" className="hover:text-slate-800 transition-colors">Privacy Policy</a>
             <a href="#terms" className="hover:text-slate-800 transition-colors">Terms of Service</a>
             <a href="#contact" className="hover:text-cyan-700 transition-colors">Security & Compliance</a>

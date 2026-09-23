@@ -7,11 +7,13 @@ import {
   CheckCircle, 
   AlertCircle, 
   Sparkles,
-  Calendar
+  Calendar,
+  Database
 } from 'lucide-react';
 import { LinkedinIcon } from './BrandIcons';
+import { db } from '../services/db';
 
-export default function ContactSection({ prefillData }) {
+export default function ContactSection({ prefillData, onOpenDatabase }) {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -25,6 +27,7 @@ export default function ContactSection({ prefillData }) {
   const [errors, setErrors] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [submittedRecord, setSubmittedRecord] = useState(null);
 
   // If user selected an estimate from the AI Estimator
   useEffect(() => {
@@ -91,11 +94,23 @@ export default function ContactSection({ prefillData }) {
     setErrors({});
     setIsSubmitting(true);
 
-    // Simulate realistic asynchronous submission
+    // Save directly into the persistent Arham Central Database
+    const record = db.addInquiry({
+      name: formData.name,
+      email: formData.email,
+      company: formData.company,
+      phone: formData.phone,
+      services: formData.selectedServices,
+      budget: formData.budget,
+      message: formData.message
+    });
+
+    setSubmittedRecord(record);
+
     setTimeout(() => {
       setIsSubmitting(false);
       setSubmitted(true);
-    }, 1200);
+    }, 800);
   };
 
   return (
@@ -207,8 +222,8 @@ export default function ContactSection({ prefillData }) {
 
                   <div className="p-4 rounded-xl bg-slate-50 border border-slate-200 text-left text-xs max-w-md mx-auto space-y-2">
                     <div className="flex justify-between text-slate-600">
-                      <span>Tracking ID:</span>
-                      <span className="font-mono text-cyan-800 font-bold">#ARHAM-{Math.floor(100000 + Math.random() * 900000)}</span>
+                      <span>Database Record ID:</span>
+                      <span className="font-mono text-cyan-800 font-bold">{submittedRecord?.id || '#ARHAM-RECORD'}</span>
                     </div>
                     <div className="flex justify-between text-slate-600">
                       <span>Email Dispatched To:</span>
@@ -218,25 +233,43 @@ export default function ContactSection({ prefillData }) {
                       <span>Target Focus:</span>
                       <span className="text-slate-900 font-semibold">{formData.selectedServices.join(', ')}</span>
                     </div>
+                    <div className="flex justify-between text-slate-600">
+                      <span>Database Sync:</span>
+                      <span className="inline-flex items-center gap-1.5 text-emerald-600 font-bold">
+                        <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                        Stored in Central Database
+                      </span>
+                    </div>
                   </div>
 
-                  <button
-                    onClick={() => {
-                      setSubmitted(false);
-                      setFormData({
-                        name: '',
-                        email: '',
-                        company: '',
-                        phone: '',
-                        selectedServices: ['AI Business Solutions'],
-                        budget: '$15k - $50k',
-                        message: ''
-                      });
-                    }}
-                    className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full text-xs font-bold text-slate-700 bg-slate-100 border border-slate-200 hover:bg-slate-200 transition-colors"
-                  >
-                    <span>Submit Another Inquiry</span>
-                  </button>
+                  <div className="flex flex-col sm:flex-row items-center justify-center gap-3 pt-2">
+                    {onOpenDatabase && (
+                      <button
+                        onClick={onOpenDatabase}
+                        className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-xs font-bold text-white bg-slate-900 hover:bg-cyan-600 transition-all shadow-md"
+                      >
+                        <Database className="w-3.5 h-3.5 text-cyan-400" />
+                        <span>View In Database Console</span>
+                      </button>
+                    )}
+                    <button
+                      onClick={() => {
+                        setSubmitted(false);
+                        setFormData({
+                          name: '',
+                          email: '',
+                          company: '',
+                          phone: '',
+                          selectedServices: ['AI Business Solutions'],
+                          budget: '$15k - $50k',
+                          message: ''
+                        });
+                      }}
+                      className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-xs font-bold text-slate-700 bg-slate-100 border border-slate-200 hover:bg-slate-200 transition-colors"
+                    >
+                      <span>Submit Another Inquiry</span>
+                    </button>
+                  </div>
                 </div>
               ) : (
                 /* The Contact Form */
