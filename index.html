@@ -5,6 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Arham Technologies | Autonomous AI Solutions & Enterprise Automation</title>
     <meta name="description" content="Arham Technologies delivers frontier AI business solutions, YouTube & Facebook channel automation, Google VEO 3, Grok, Claude trainings, AI agent creations, and eCommerce development. Led by Yasir Islam Butt with 25+ years of enterprise experience." />
+    <!-- Auto-unregister old service workers and clear stale caches -->
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.getRegistrations().then(function(registrations) {
+          for (var r of registrations) { r.unregister(); }
+        });
+      }
+      if ('caches' in window) {
+        caches.keys().then(function(names) {
+          for (var name of names) { caches.delete(name); }
+        });
+      }
+    </script>
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,6 +27,6 @@
     <link rel="stylesheet" crossorigin href="./assets/index-09d91bI5.css">
   </head>
   <body class="bg-[#f8fafc] text-slate-800 antialiased selection:bg-cyan-500/20 selection:text-cyan-900">
-    <div id="root"></div>
+    <div id="root"></div>
   </body>
 </html>
