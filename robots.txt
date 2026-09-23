@@ -1,0 +1,13 @@
+# robots.txt for Arham Technologies Ltd
+# Allow all search engines to crawl the site
+
+User-agent: *
+Allow: /
+
+# Disallow crawling of sensitive files and folders
+Disallow: /private/
+Disallow: /tmp/
+Disallow: /admin/
+
+# Sitemap location (important for SEO)
+Sitemap: https://www.arhamtechnologies.ltd/sitemap.xml
