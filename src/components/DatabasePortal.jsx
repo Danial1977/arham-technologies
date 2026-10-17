@@ -175,7 +175,8 @@ export default function DatabasePortal({ onBackToSite }) {
       (item.name || '').toLowerCase().includes(searchTerm.toLowerCase()) ||
       (item.company || '').toLowerCase().includes(searchTerm.toLowerCase()) ||
       (item.email || '').toLowerCase().includes(searchTerm.toLowerCase()) ||
-      (item.id || '').toLowerCase().includes(searchTerm.toLowerCase());
+      (item.id || '').toLowerCase().includes(searchTerm.toLowerCase()) ||
+        (item.message || item.desc || item.description || '').toLowerCase().includes(searchTerm.toLowerCase());
     
     const matchesStatus = statusFilter === 'ALL' || item.status === statusFilter;
     return matchesSearch && matchesStatus;
@@ -437,84 +438,126 @@ export default function DatabasePortal({ onBackToSite }) {
               </div>
             </div>
 
-            {/* Table */}
+            {/* Trimmed Table: Inquiry Date, Client, Description, Service & Budget, Status & Actions */}
             <div className="overflow-x-auto">
               <table className="w-full text-left text-xs">
                 <thead className="bg-[#F5EFE6] text-[#26160C] font-bold uppercase tracking-wider border-b border-[#E8DFD5]">
                   <tr>
-                    <th className="py-3 px-4">Record ID</th>
-                    <th className="py-3 px-4">Client / Company</th>
-                    <th className="py-3 px-4">Services Target</th>
-                    <th className="py-3 px-4">Budget Tier</th>
-                    <th className="py-3 px-4">Timestamp</th>
-                    <th className="py-3 px-4">Status</th>
-                    <th className="py-3 px-4 text-right">Actions</th>
+                    <th className="py-3.5 px-4 w-40 whitespace-nowrap">Inquiry Date</th>
+                    <th className="py-3.5 px-4 w-52">Client / Entity</th>
+                    <th className="py-3.5 px-4">Inquiry Description</th>
+                    <th className="py-3.5 px-4 w-48">Service & Budget</th>
+                    <th className="py-3.5 px-4 text-right w-40 whitespace-nowrap">Status & Actions</th>
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-[#E8DFD5]/60">
                   {filteredInquiries.length === 0 ? (
                     <tr>
-                      <td colSpan={7} className="py-12 text-center text-[#664E40]">
+                      <td colSpan={5} className="py-12 text-center text-[#664E40]">
                         No inquiry records matching current query or filters.
                       </td>
                     </tr>
                   ) : (
-                    filteredInquiries.map((inq) => (
-                      <tr key={inq.id} className="hover:bg-[#FAF7F2] transition-colors">
-                        <td className="py-3 px-4 font-mono font-bold text-[#8C5E2D]">
-                          {inq.id}
-                        </td>
-                        <td className="py-3 px-4">
-                          <div className="font-bold text-[#26160C]">{inq.name}</div>
-                          <div className="text-[11px] text-[#664E40]">{inq.company || inq.email}</div>
-                        </td>
-                        <td className="py-3 px-4">
-                          <span className="inline-block px-2 py-0.5 rounded-md bg-[#F5EFE6] text-[#8C5E2D] font-semibold border border-[#E8DFD5]">
-                            {Array.isArray(inq.services) ? inq.services[0] : inq.services}
-                          </span>
-                        </td>
-                        <td className="py-3 px-4 font-semibold text-[#26160C]">
-                          {inq.budget}
-                        </td>
-                        <td className="py-3 px-4 text-[#664E40] font-mono text-[11px]">
-                          {new Date(inq.timestamp).toLocaleDateString()} {new Date(inq.timestamp).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
-                        </td>
-                        <td className="py-3 px-4">
-                          <select
-                            value={inq.status}
-                            onChange={(e) => handleStatusChange(inq.id, e.target.value)}
-                            className={`px-2.5 py-1 rounded-md text-[11px] font-bold border ${
-                              inq.status === 'New' 
-                                ? 'bg-amber-50 text-amber-900 border-amber-300' 
-                                : inq.status === 'Contacted'
-                                ? 'bg-blue-50 text-blue-900 border-blue-300'
-                                : 'bg-emerald-50 text-emerald-900 border-emerald-300'
-                            }`}
-                          >
-                            <option value="New">New</option>
-                            <option value="Contacted">Contacted</option>
-                            <option value="Qualified">Qualified</option>
-                            <option value="Completed">Completed</option>
-                          </select>
-                        </td>
-                        <td className="py-3 px-4 text-right space-x-2">
-                          <button
-                            onClick={() => setSelectedInquiry(inq)}
-                            className="p-1 rounded text-[#8C5E2D] hover:text-[#734A1F] hover:bg-[#F5EFE6] transition-colors"
-                            title="Inspect Record"
-                          >
-                            <Eye className="w-4 h-4 inline" />
-                          </button>
-                          <button
-                            onClick={() => handleDeleteInquiry(inq.id)}
-                            className="p-1 rounded text-red-600 hover:text-red-800 hover:bg-red-50 transition-colors"
-                            title="Delete Record"
-                          >
-                            <Trash2 className="w-4 h-4 inline" />
-                          </button>
-                        </td>
-                      </tr>
-                    ))
+                    filteredInquiries.map((inq) => {
+                      const dateVal = inq.date || inq.timestamp;
+                      const formattedDate = dateVal ? (() => {
+                        const d = new Date(dateVal);
+                        return isNaN(d.getTime()) ? 'Recently' : d.toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' });
+                      })() : 'Recently';
+                      const formattedTime = dateVal ? (() => {
+                        const d = new Date(dateVal);
+                        return isNaN(d.getTime()) ? '' : d.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+                      })() : '';
+                      const descText = inq.message || inq.desc || inq.description || 'No description provided.';
+
+                      return (
+                        <tr key={inq.id} className="hover:bg-[#FAF7F2] transition-colors group">
+                          {/* 1. Inquiry Date & ID */}
+                          <td className="py-3.5 px-4 whitespace-nowrap align-top">
+                            <div className="font-bold text-[#26160C] text-xs">
+                              {formattedDate}
+                            </div>
+                            <div className="text-[11px] text-[#8C5E2D] font-mono mt-0.5 flex items-center gap-1.5">
+                              <span>{formattedTime}</span>
+                              <span className="text-[#D5C4A1]">?</span>
+                              <span className="font-semibold">{inq.id}</span>
+                            </div>
+                          </td>
+
+                          {/* 2. Client / Entity */}
+                          <td className="py-3.5 px-4 align-top">
+                            <div className="font-bold text-[#26160C] text-xs">{inq.name}</div>
+                            <div className="text-[11px] text-[#664E40] truncate max-w-[200px]">
+                              {inq.company || inq.email}
+                            </div>
+                            {inq.phone && (
+                              <div className="text-[10px] text-[#8C7A6D] font-mono mt-0.5">
+                                {inq.phone}
+                              </div>
+                            )}
+                          </td>
+
+                          {/* 3. Inquiry Description (Prominent desc column) */}
+                          <td className="py-3.5 px-4 align-top">
+                            <div 
+                              onClick={() => setSelectedInquiry(inq)}
+                              className="p-2.5 rounded-xl bg-[#FAF7F2] group-hover:bg-white border border-[#E8DFD5] text-xs text-[#332015] leading-relaxed line-clamp-2 group-hover:line-clamp-none transition-all cursor-pointer shadow-2xs"
+                              title="Click to inspect full inquiry details"
+                            >
+                              <span className="text-[#8C5E2D] font-semibold mr-1">Desc:</span>
+                              {descText}
+                            </div>
+                          </td>
+
+                          {/* 4. Service & Budget */}
+                          <td className="py-3.5 px-4 align-top">
+                            <div className="inline-block px-2 py-0.5 rounded-md bg-[#F5EFE6] text-[#8C5E2D] font-semibold text-[11px] border border-[#E8DFD5] truncate max-w-[170px]">
+                              {Array.isArray(inq.services) ? inq.services[0] : inq.services}
+                            </div>
+                            <div className="text-xs font-bold text-[#26160C] mt-1 font-mono">
+                              {inq.budget || 'Standard Tier'}
+                            </div>
+                          </td>
+
+                          {/* 5. Status & Actions */}
+                          <td className="py-3.5 px-4 text-right whitespace-nowrap align-top">
+                            <div className="flex items-center justify-end gap-2">
+                              <select
+                                value={inq.status}
+                                onChange={(e) => handleStatusChange(inq.id, e.target.value)}
+                                className={`px-2 py-1 rounded-md text-[11px] font-bold border ${
+                                  inq.status === 'New' 
+                                    ? 'bg-amber-50 text-amber-900 border-amber-300' 
+                                    : inq.status === 'Contacted'
+                                    ? 'bg-blue-50 text-blue-900 border-blue-300'
+                                    : 'bg-emerald-50 text-emerald-900 border-emerald-300'
+                                }`}
+                              >
+                                <option value="New">New</option>
+                                <option value="Contacted">Contacted</option>
+                                <option value="Qualified">Qualified</option>
+                                <option value="Completed">Completed</option>
+                              </select>
+
+                              <button
+                                onClick={() => setSelectedInquiry(inq)}
+                                className="p-1.5 rounded-lg text-[#8C5E2D] hover:text-[#734A1F] hover:bg-[#F5EFE6] border border-[#E8DFD5] transition-colors"
+                                title="Inspect Record Details"
+                              >
+                                <Eye className="w-3.5 h-3.5" />
+                              </button>
+                              <button
+                                onClick={() => handleDeleteInquiry(inq.id)}
+                                className="p-1.5 rounded-lg text-red-600 hover:text-red-800 hover:bg-red-50 border border-red-200 transition-colors"
+                                title="Delete Record"
+                              >
+                                <Trash2 className="w-3.5 h-3.5" />
+                              </button>
+                            </div>
+                          </td>
+                        </tr>
+                      );
+                    })
                   )}
                 </tbody>
               </table>
@@ -681,11 +724,16 @@ export default function DatabasePortal({ onBackToSite }) {
               <X className="w-5 h-5" />
             </button>
 
-            <div className="flex items-center gap-2 mb-4">
-              <span className="font-mono font-bold text-[#8C5E2D] text-sm">{selectedInquiry.id}</span>
-              <span className="text-xs px-2 py-0.5 rounded-full bg-amber-100 text-amber-800 font-bold border border-amber-200">
-                {selectedInquiry.status}
-              </span>
+            <div className="flex items-center justify-between gap-2 mb-4 pb-3 border-b border-[#E8DFD5]">
+              <div className="flex items-center gap-2">
+                <span className="font-mono font-bold text-[#8C5E2D] text-sm">{selectedInquiry.id}</span>
+                <span className="text-xs px-2 py-0.5 rounded-full bg-amber-100 text-amber-800 font-bold border border-amber-200">
+                  {selectedInquiry.status}
+                </span>
+              </div>
+              <div className="text-xs text-[#664E40] font-mono">
+                {selectedInquiry.date || selectedInquiry.timestamp ? new Date(selectedInquiry.date || selectedInquiry.timestamp).toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' }) + ' ' + new Date(selectedInquiry.date || selectedInquiry.timestamp).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }) : 'Recently'}
+              </div>
             </div>
 
             <h3 className="text-xl font-bold text-[#26160C] font-['Cinzel'] mb-1">
