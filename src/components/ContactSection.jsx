@@ -114,18 +114,18 @@ export default function ContactSection({ prefillData, onOpenDatabase }) {
   };
 
   return (
-    <section id="contact" className="py-24 bg-white relative border-t border-slate-200">
+    <section id="contact" className="py-24 bg-white relative border-t border-[#E8DFD5]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-cyan-100/70 border border-cyan-200 text-xs font-bold text-cyan-800 uppercase tracking-widest mb-3">
-            <Mail className="w-3.5 h-3.5 text-cyan-700" /> Direct Consultation
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#F5EFE6] border border-[#E8DFD5] text-xs font-bold text-[#8C5E2D] uppercase tracking-widest mb-3">
+            <Mail className="w-3.5 h-3.5 text-[#8C5E2D]" /> Direct Consultation
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 tracking-tight font-['Space_Grotesk']">
-            Let's Engineer Your <span className="bg-gradient-to-r from-cyan-600 to-indigo-600 bg-clip-text text-transparent">AI Advantage</span>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#26160C] tracking-tight font-['Cinzel']">
+            Let's Engineer Your <span className="bg-gradient-to-r from-[#8C5E2D] via-[#B89F70] to-[#523C1B] bg-clip-text text-transparent">AI Advantage</span>
           </h2>
-          <p className="mt-4 text-base sm:text-lg text-slate-600">
+          <p className="mt-4 text-base sm:text-lg text-[#664E40]">
             Connect directly with Yasir Islam Butt and our senior AI engineering team. We review each inquiry within 2 hours and provide actionable technical roadmaps.
           </p>
         </div>
@@ -134,39 +134,39 @@ export default function ContactSection({ prefillData, onOpenDatabase }) {
           
           {/* Left Column: Direct Info & Credentials */}
           <div className="lg:col-span-5 space-y-6">
-            <div className="glass-panel bg-slate-50/90 p-8 rounded-2xl border border-slate-200 space-y-6 shadow-sm">
-              <h3 className="text-xl font-bold text-slate-900 font-['Space_Grotesk'] flex items-center gap-2">
-                <Sparkles className="w-5 h-5 text-cyan-600" />
+            <div className="glass-panel bg-[#FAF7F2] p-8 rounded-2xl border border-[#E8DFD5] space-y-6 shadow-xs">
+              <h3 className="text-xl font-bold text-[#26160C] font-['Cinzel'] flex items-center gap-2">
+                <Sparkles className="w-5 h-5 text-[#8C5E2D]" />
                 <span>Executive Office</span>
               </h3>
-              <p className="text-sm text-slate-600 leading-relaxed">
+              <p className="text-sm text-[#664E40] leading-relaxed">
                 Whether you need turnkey channel automation, multi-agent deployment, bespoke Claude training, or mission-critical application support—we stand ready to partner.
               </p>
 
-              <div className="space-y-4 pt-4 border-t border-slate-200">
+              <div className="space-y-4 pt-4 border-t border-[#E8DFD5]">
                 <div className="flex items-start gap-3">
-                  <div className="w-9 h-9 rounded-lg bg-white border border-slate-200 flex items-center justify-center shrink-0 shadow-2xs">
-                    <Mail className="w-4 h-4 text-cyan-600" />
+                  <div className="w-9 h-9 rounded-lg bg-white border border-[#E8DFD5] flex items-center justify-center shrink-0 shadow-2xs">
+                    <Mail className="w-4 h-4 text-[#8C5E2D]" />
                   </div>
                   <div>
-                    <span className="text-xs text-slate-500 block font-medium">Direct Inquiry</span>
-                    <a href="mailto:info@arhamtechnologies.com" className="text-sm font-bold text-slate-900 hover:text-cyan-700 transition-colors">
+                    <span className="text-xs text-[#664E40] block font-medium">Direct Inquiry</span>
+                    <a href="mailto:info@arhamtechnologies.com" className="text-sm font-bold text-[#26160C] hover:text-[#8C5E2D] transition-colors">
                       info@arhamtechnologies.com
                     </a>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-3">
-                  <div className="w-9 h-9 rounded-lg bg-white border border-slate-200 flex items-center justify-center shrink-0 shadow-2xs">
-                    <LinkedinIcon className="w-4 h-4 fill-[#0077b5]" />
+                  <div className="w-9 h-9 rounded-lg bg-white border border-[#E8DFD5] flex items-center justify-center shrink-0 shadow-2xs">
+                    <LinkedinIcon className="w-4 h-4 fill-[#8C5E2D]" />
                   </div>
                   <div>
-                    <span className="text-xs text-slate-500 block font-medium">Founder Profile</span>
+                    <span className="text-xs text-[#664E40] block font-medium">Founder Profile</span>
                     <a 
                       href="https://www.linkedin.com/in/yasirislambutt/" 
                       target="_blank" 
                       rel="noopener noreferrer"
-                      className="text-sm font-bold text-cyan-700 hover:underline flex items-center gap-1"
+                      className="text-sm font-bold text-[#8C5E2D] hover:underline flex items-center gap-1"
                     >
                       Yasir Islam Butt on LinkedIn
                     </a>
@@ -174,66 +174,69 @@ export default function ContactSection({ prefillData, onOpenDatabase }) {
                 </div>
 
                 <div className="flex items-start gap-3">
-                  <div className="w-9 h-9 rounded-lg bg-white border border-slate-200 flex items-center justify-center shrink-0 shadow-2xs">
-                    <Clock className="w-4 h-4 text-emerald-600" />
+                  <div className="w-9 h-9 rounded-lg bg-white border border-[#E8DFD5] flex items-center justify-center shrink-0 shadow-2xs">
+                    <Clock className="w-4 h-4 text-[#8C5E2D]" />
                   </div>
                   <div>
-                    <span className="text-xs text-slate-500 block font-medium">Response Window</span>
-                    <span className="text-sm font-bold text-slate-900">Under 2 Hours (Mon-Sat)</span>
+                    <span className="text-xs text-[#664E40] block font-medium">Response Window</span>
+                    <span className="text-sm font-bold text-[#26160C]">Under 2 Hours (Mon-Sat)</span>
                   </div>
                 </div>
               </div>
 
               {/* Trust Badge */}
-              <div className="p-4 rounded-xl bg-white border border-slate-200 text-xs text-slate-600 flex items-center gap-3 shadow-2xs">
-                <ShieldCheck className="w-6 h-6 text-cyan-600 shrink-0" />
+              <div className="p-4 rounded-xl bg-white border border-[#E8DFD5] text-xs text-[#664E40] flex items-center gap-3 shadow-2xs">
+                <ShieldCheck className="w-6 h-6 text-[#8C5E2D] shrink-0" />
                 <span>Non-Disclosure & Enterprise Confidentiality Guaranteed across all discovery calls.</span>
               </div>
             </div>
 
             {/* Quick Call Out */}
-            <div className="p-6 rounded-2xl bg-cyan-50/70 border border-cyan-200">
-              <div className="flex items-center gap-2 text-cyan-800 text-xs font-bold uppercase tracking-wider mb-2">
-                <Calendar className="w-4 h-4 text-cyan-600" /> Prefer Live Discussion?
+            <div className="p-6 rounded-2xl bg-[#F5EFE6] border border-[#E8DFD5]">
+              <div className="flex items-center gap-2 text-[#8C5E2D] text-xs font-bold uppercase tracking-wider mb-2">
+                <Calendar className="w-4 h-4 text-[#8C5E2D]" /> Prefer Live Discussion?
               </div>
-              <p className="text-xs text-slate-600 mb-3">
+              <p className="text-xs text-[#664E40] mb-3">
                 Fill the inquiry form or specify your preferred time slot for a direct Zoom/Google Meet architecture review.
               </p>
+              <div className="text-[11px] font-semibold text-[#8C5E2D]">
+                Immediate calendar invite dispatched upon receipt.
+              </div>
             </div>
           </div>
 
           {/* Right Column: Interactive Form */}
           <div className="lg:col-span-7">
-            <div className="glass-panel bg-white p-8 sm:p-10 rounded-3xl border border-slate-200 relative shadow-xl">
+            <div className="glass-panel bg-white p-8 sm:p-10 rounded-2xl border border-[#E8DFD5] shadow-xl">
               
               {submitted ? (
-                /* Success State Modal / Card */
-                <div className="text-center py-10 space-y-6 animate-fade-in">
-                  <div className="w-16 h-16 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-600 flex items-center justify-center mx-auto shadow-md">
+                /* Confirmation Screen */
+                <div className="text-center py-10 space-y-4 animate-fade-in">
+                  <div className="w-16 h-16 rounded-full bg-[#F5EFE6] text-[#8C5E2D] flex items-center justify-center mx-auto mb-4 border border-[#E8DFD5]">
                     <CheckCircle className="w-8 h-8" />
                   </div>
 
-                  <h3 className="text-2xl font-bold text-slate-900 font-['Space_Grotesk']">
+                  <h3 className="text-2xl font-bold text-[#26160C] font-['Cinzel']">
                     Consultation Request Confirmed
                   </h3>
-                  <p className="text-slate-600 text-sm max-w-md mx-auto leading-relaxed">
-                    Thank you, <span className="text-slate-900 font-bold">{formData.name}</span>. Your project parameters have been routed directly to <span className="text-cyan-700 font-bold">Yasir Islam Butt</span> and our principal engineering lead.
+                  <p className="text-[#664E40] text-sm max-w-md mx-auto leading-relaxed">
+                    Thank you, <span className="text-[#26160C] font-bold">{formData.name}</span>. Your project parameters have been routed directly to <span className="text-[#8C5E2D] font-bold">Yasir Islam Butt</span> and our principal engineering lead.
                   </p>
 
-                  <div className="p-4 rounded-xl bg-slate-50 border border-slate-200 text-left text-xs max-w-md mx-auto space-y-2">
-                    <div className="flex justify-between text-slate-600">
+                  <div className="p-4 rounded-xl bg-[#FAF7F2] border border-[#E8DFD5] text-left text-xs max-w-md mx-auto space-y-2">
+                    <div className="flex justify-between text-[#664E40]">
                       <span>Database Record ID:</span>
-                      <span className="font-mono text-cyan-800 font-bold">{submittedRecord?.id || '#ARHAM-RECORD'}</span>
+                      <span className="font-mono text-[#8C5E2D] font-bold">{submittedRecord?.id || '#ARHAM-RECORD'}</span>
                     </div>
-                    <div className="flex justify-between text-slate-600">
+                    <div className="flex justify-between text-[#664E40]">
                       <span>Email Dispatched To:</span>
-                      <span className="text-slate-900 font-semibold">{formData.email}</span>
+                      <span className="text-[#26160C] font-semibold">{formData.email}</span>
                     </div>
-                    <div className="flex justify-between text-slate-600">
+                    <div className="flex justify-between text-[#664E40]">
                       <span>Target Focus:</span>
-                      <span className="text-slate-900 font-semibold">{formData.selectedServices.join(', ')}</span>
+                      <span className="text-[#26160C] font-semibold">{formData.selectedServices.join(', ')}</span>
                     </div>
-                    <div className="flex justify-between text-slate-600">
+                    <div className="flex justify-between text-[#664E40]">
                       <span>Database Sync:</span>
                       <span className="inline-flex items-center gap-1.5 text-emerald-600 font-bold">
                         <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
@@ -246,9 +249,9 @@ export default function ContactSection({ prefillData, onOpenDatabase }) {
                     {onOpenDatabase && (
                       <button
                         onClick={onOpenDatabase}
-                        className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-xs font-bold text-white bg-slate-900 hover:bg-cyan-600 transition-all shadow-md"
+                        className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-xs font-bold text-white bg-[#26160C] hover:bg-[#8C5E2D] transition-all shadow-md"
                       >
-                        <Database className="w-3.5 h-3.5 text-cyan-400" />
+                        <Database className="w-3.5 h-3.5 text-[#D5C4A1]" />
                         <span>View In Database Console</span>
                       </button>
                     )}
@@ -265,7 +268,7 @@ export default function ContactSection({ prefillData, onOpenDatabase }) {
                           message: ''
                         });
                       }}
-                      className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-xs font-bold text-slate-700 bg-slate-100 border border-slate-200 hover:bg-slate-200 transition-colors"
+                      className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-xs font-bold text-[#332015] bg-[#F5EFE6] border border-[#E8DFD5] hover:bg-[#E8DEC8] transition-colors"
                     >
                       <span>Submit Another Inquiry</span>
                     </button>
@@ -278,16 +281,16 @@ export default function ContactSection({ prefillData, onOpenDatabase }) {
                   {/* Name & Email Row */}
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                     <div>
-                      <label className="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2">
-                        Full Name <span className="text-cyan-600">*</span>
+                      <label className="block text-xs font-bold uppercase tracking-wider text-[#26160C] mb-2">
+                        Full Name <span className="text-[#8C5E2D]">*</span>
                       </label>
                       <input
                         type="text"
                         placeholder="e.g. Yasir Khan"
                         value={formData.name}
                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                        className={`w-full px-4 py-3 rounded-xl bg-slate-50 border text-sm text-slate-900 placeholder-slate-400 focus:bg-white focus:outline-none focus:ring-2 focus:ring-cyan-500/20 transition-all ${
-                          errors.name ? 'border-red-500' : 'border-slate-200 focus:border-cyan-500'
+                        className={`w-full px-4 py-3 rounded-xl bg-[#FAF7F2] border text-sm text-[#26160C] placeholder-[#8C7A6D] focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#8C5E2D]/20 transition-all ${
+                          errors.name ? 'border-red-500' : 'border-[#E8DFD5] focus:border-[#8C5E2D]'
                         }`}
                       />
                       {errors.name && (
@@ -298,16 +301,16 @@ export default function ContactSection({ prefillData, onOpenDatabase }) {
                     </div>
 
                     <div>
-                      <label className="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2">
-                        Business Email <span className="text-cyan-600">*</span>
+                      <label className="block text-xs font-bold uppercase tracking-wider text-[#26160C] mb-2">
+                        Business Email <span className="text-[#8C5E2D]">*</span>
                       </label>
                       <input
                         type="email"
                         placeholder="yasir@company.com"
                         value={formData.email}
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                        className={`w-full px-4 py-3 rounded-xl bg-slate-50 border text-sm text-slate-900 placeholder-slate-400 focus:bg-white focus:outline-none focus:ring-2 focus:ring-cyan-500/20 transition-all ${
-                          errors.email ? 'border-red-500' : 'border-slate-200 focus:border-cyan-500'
+                        className={`w-full px-4 py-3 rounded-xl bg-[#FAF7F2] border text-sm text-[#26160C] placeholder-[#8C7A6D] focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#8C5E2D]/20 transition-all ${
+                          errors.email ? 'border-red-500' : 'border-[#E8DFD5] focus:border-[#8C5E2D]'
                         }`}
                       />
                       {errors.email && (
@@ -321,7 +324,7 @@ export default function ContactSection({ prefillData, onOpenDatabase }) {
                   {/* Company & Phone Row */}
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                     <div>
-                      <label className="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2">
+                      <label className="block text-xs font-bold uppercase tracking-wider text-[#26160C] mb-2">
                         Company or Brand
                       </label>
                       <input
@@ -329,12 +332,12 @@ export default function ContactSection({ prefillData, onOpenDatabase }) {
                         placeholder="Company name or channel"
                         value={formData.company}
                         onChange={(e) => setFormData({ ...formData, company: e.target.value })}
-                        className="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 focus:bg-white focus:border-cyan-500 text-sm text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500/20 transition-all"
+                        className="w-full px-4 py-3 rounded-xl bg-[#FAF7F2] border border-[#E8DFD5] focus:bg-white focus:border-[#8C5E2D] text-sm text-[#26160C] placeholder-[#8C7A6D] focus:outline-none focus:ring-2 focus:ring-[#8C5E2D]/20 transition-all"
                       />
                     </div>
 
                     <div>
-                      <label className="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2">
+                      <label className="block text-xs font-bold uppercase tracking-wider text-[#26160C] mb-2">
                         Phone / WhatsApp (Optional)
                       </label>
                       <input
@@ -342,14 +345,14 @@ export default function ContactSection({ prefillData, onOpenDatabase }) {
                         placeholder="+1 (555) 000-0000"
                         value={formData.phone}
                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                        className="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 focus:bg-white focus:border-cyan-500 text-sm text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500/20 transition-all"
+                        className="w-full px-4 py-3 rounded-xl bg-[#FAF7F2] border border-[#E8DFD5] focus:bg-white focus:border-[#8C5E2D] text-sm text-[#26160C] placeholder-[#8C7A6D] focus:outline-none focus:ring-2 focus:ring-[#8C5E2D]/20 transition-all"
                       />
                     </div>
                   </div>
 
                   {/* Services Multi-Select Chips */}
                   <div>
-                    <label className="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2">
+                    <label className="block text-xs font-bold uppercase tracking-wider text-[#26160C] mb-2">
                       Services of Interest (Select All That Apply)
                     </label>
                     <div className="flex flex-wrap gap-2">
@@ -362,8 +365,8 @@ export default function ContactSection({ prefillData, onOpenDatabase }) {
                             onClick={() => toggleService(srv)}
                             className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-all ${
                               isSelected
-                                ? 'bg-cyan-600 text-white shadow-sm'
-                                : 'bg-slate-100 border border-slate-200 text-slate-700 hover:bg-slate-200'
+                                ? 'bg-[#8C5E2D] text-white shadow-xs'
+                                : 'bg-[#F5EFE6] border border-[#E8DFD5] text-[#664E40] hover:bg-[#E8DEC8]'
                             }`}
                           >
                             {isSelected ? '✓ ' : '+ '}
@@ -376,7 +379,7 @@ export default function ContactSection({ prefillData, onOpenDatabase }) {
 
                   {/* Budget Selector */}
                   <div>
-                    <label className="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2">
+                    <label className="block text-xs font-bold uppercase tracking-wider text-[#26160C] mb-2">
                       Estimated Project Scope / Budget
                     </label>
                     <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
@@ -387,8 +390,8 @@ export default function ContactSection({ prefillData, onOpenDatabase }) {
                           onClick={() => setFormData({ ...formData, budget: tier })}
                           className={`py-2 px-3 rounded-xl text-xs font-bold text-center border transition-all ${
                             formData.budget === tier
-                              ? 'bg-cyan-50 border-cyan-500 text-cyan-800 shadow-xs'
-                              : 'bg-slate-50 border-slate-200 text-slate-600 hover:bg-slate-100'
+                              ? 'bg-[#F5EFE6] border-[#8C5E2D] text-[#8C5E2D] shadow-2xs'
+                              : 'bg-[#FAF7F2] border-[#E8DFD5] text-[#664E40] hover:bg-[#F5EFE6]'
                           }`}
                         >
                           {tier}
@@ -399,16 +402,16 @@ export default function ContactSection({ prefillData, onOpenDatabase }) {
 
                   {/* Message Field */}
                   <div>
-                    <label className="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2">
-                      Project Objective or Specific Requirements <span className="text-cyan-600">*</span>
+                    <label className="block text-xs font-bold uppercase tracking-wider text-[#26160C] mb-2">
+                      Project Objective or Specific Requirements <span className="text-[#8C5E2D]">*</span>
                     </label>
                     <textarea
                       rows={4}
                       placeholder="Tell us about your automation goals, team size, current bottlenecks, or specific training requirements..."
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                      className={`w-full px-4 py-3 rounded-xl bg-slate-50 border text-sm text-slate-900 placeholder-slate-400 focus:bg-white focus:outline-none focus:ring-2 focus:ring-cyan-500/20 transition-all ${
-                        errors.message ? 'border-red-500' : 'border-slate-200 focus:border-cyan-500'
+                      className={`w-full px-4 py-3 rounded-xl bg-[#FAF7F2] border text-sm text-[#26160C] placeholder-[#8C7A6D] focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#8C5E2D]/20 transition-all ${
+                        errors.message ? 'border-red-500' : 'border-[#E8DFD5] focus:border-[#8C5E2D]'
                       }`}
                     />
                     {errors.message && (
@@ -422,7 +425,7 @@ export default function ContactSection({ prefillData, onOpenDatabase }) {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full py-4 px-8 rounded-xl font-bold text-sm text-white bg-gradient-to-r from-cyan-600 via-blue-600 to-indigo-600 hover:from-cyan-500 hover:to-indigo-500 shadow-lg shadow-cyan-600/25 transition-all duration-300 flex items-center justify-center gap-2 disabled:opacity-50"
+                    className="w-full py-4 px-8 rounded-xl font-bold text-sm text-white bg-gradient-to-r from-[#8C5E2D] via-[#A87944] to-[#734A1F] hover:from-[#734A1F] hover:to-[#523C1B] shadow-lg shadow-[#8C5E2D]/25 transition-all duration-300 flex items-center justify-center gap-2 disabled:opacity-50"
                   >
                     {isSubmitting ? (
                       <>
@@ -437,7 +440,7 @@ export default function ContactSection({ prefillData, onOpenDatabase }) {
                     )}
                   </button>
 
-                  <div className="text-center text-[11px] text-slate-500 font-medium">
+                  <div className="text-center text-[11px] text-[#664E40] font-medium">
                     Protected by 256-bit enterprise encryption • Zero spam guarantee
                   </div>
                 </form>

@@ -77,19 +77,19 @@ export default function AiEstimator({ onSelectEstimate }) {
   const currentGoalTitle = goals.find(g => g.id === goal)?.title;
 
   return (
-    <section id="ai-estimator" className="py-24 bg-slate-50/70 relative border-t border-b border-slate-200">
-      {/* Background glow */}
-      <div className="absolute top-1/2 left-1/4 -translate-y-1/2 w-96 h-96 glow-cyan rounded-full pointer-events-none blur-3xl opacity-40" />
+    <section id="ai-estimator" className="py-24 bg-[#F5EFE6]/50 relative border-t border-b border-[#E8DFD5]">
+      {/* Background glow in warm walnut */}
+      <div className="absolute top-1/2 left-1/4 -translate-y-1/2 w-96 h-96 glow-walnut rounded-full pointer-events-none blur-3xl opacity-40" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-14">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-cyan-100/70 border border-cyan-200 text-xs font-bold text-cyan-800 uppercase tracking-widest mb-3">
-            <Calculator className="w-3.5 h-3.5 text-cyan-700" /> Interactive ROI & Architecture Planner
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#FAF7F2] border border-[#E8DFD5] text-xs font-bold text-[#8C5E2D] uppercase tracking-widest mb-3">
+            <Calculator className="w-3.5 h-3.5 text-[#8C5E2D]" /> Interactive ROI & Architecture Planner
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 tracking-tight font-['Space_Grotesk']">
-            Calculate Your <span className="bg-gradient-to-r from-cyan-600 to-indigo-600 bg-clip-text text-transparent">AI Acceleration Impact</span>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#26160C] tracking-tight font-['Cinzel']">
+            Calculate Your <span className="bg-gradient-to-r from-[#8C5E2D] via-[#B89F70] to-[#523C1B] bg-clip-text text-transparent">AI Acceleration Impact</span>
           </h2>
-          <p className="mt-4 text-base sm:text-lg text-slate-600">
+          <p className="mt-4 text-base sm:text-lg text-[#664E40]">
             Select your organization’s immediate objective and team scale to see an instant projection of operational hours saved, velocity multipliers, and recommended technology stack.
           </p>
         </div>
@@ -98,8 +98,8 @@ export default function AiEstimator({ onSelectEstimate }) {
           {/* Controls Column */}
           <div className="lg:col-span-7 space-y-6">
             {/* Step 1: Objective */}
-            <div className="glass-panel p-6 rounded-2xl border border-slate-200 shadow-sm">
-              <label className="text-xs font-bold uppercase tracking-wider text-cyan-800 mb-4 block">
+            <div className="glass-panel p-6 rounded-2xl border border-[#E8DFD5] shadow-xs">
+              <label className="text-xs font-bold uppercase tracking-wider text-[#8C5E2D] mb-4 block">
                 Step 1: Select Your Primary AI Objective
               </label>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -109,21 +109,21 @@ export default function AiEstimator({ onSelectEstimate }) {
                     onClick={() => setGoal(g.id)}
                     className={`p-4 rounded-xl text-left transition-all duration-200 border flex flex-col justify-between ${
                       goal === g.id
-                        ? 'bg-cyan-50/90 border-cyan-500 shadow-sm'
-                        : 'bg-white border-slate-200 hover:border-slate-300 text-slate-600'
+                        ? 'bg-[#F5EFE6] border-[#8C5E2D] shadow-xs'
+                        : 'bg-white border-[#E8DFD5] hover:border-[#8C5E2D]/40 text-[#664E40]'
                     }`}
                   >
                     <div>
                       <div className="text-2xl mb-2">{g.icon}</div>
-                      <div className={`font-bold text-sm ${goal === g.id ? 'text-slate-900' : 'text-slate-800'}`}>
+                      <div className={`font-bold text-sm ${goal === g.id ? 'text-[#26160C]' : 'text-[#332015]'}`}>
                         {g.title}
                       </div>
-                      <div className="text-xs text-slate-500 mt-1 line-clamp-2">
+                      <div className="text-xs text-[#664E40] mt-1 line-clamp-2">
                         {g.desc}
                       </div>
                     </div>
                     {goal === g.id && (
-                      <div className="mt-3 flex items-center gap-1 text-[11px] font-bold text-cyan-700">
+                      <div className="mt-3 flex items-center gap-1 text-[11px] font-bold text-[#8C5E2D]">
                         <Check className="w-3.5 h-3.5" /> Selected Goal
                       </div>
                     )}
@@ -133,8 +133,8 @@ export default function AiEstimator({ onSelectEstimate }) {
             </div>
 
             {/* Step 2: Scale */}
-            <div className="glass-panel p-6 rounded-2xl border border-slate-200 shadow-sm">
-              <label className="text-xs font-bold uppercase tracking-wider text-cyan-800 mb-4 block">
+            <div className="glass-panel p-6 rounded-2xl border border-[#E8DFD5] shadow-xs">
+              <label className="text-xs font-bold uppercase tracking-wider text-[#8C5E2D] mb-4 block">
                 Step 2: Organization / Department Scale
               </label>
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
@@ -144,8 +144,8 @@ export default function AiEstimator({ onSelectEstimate }) {
                     onClick={() => setScale(s.id)}
                     className={`py-3 px-4 rounded-xl text-xs font-bold text-center border transition-all ${
                       scale === s.id
-                        ? 'bg-gradient-to-r from-cyan-600 to-blue-600 text-white border-transparent shadow-md shadow-cyan-600/20'
-                        : 'bg-white border-slate-200 text-slate-700 hover:bg-slate-50 hover:border-slate-300'
+                        ? 'bg-gradient-to-r from-[#8C5E2D] via-[#A87944] to-[#734A1F] text-white border-transparent shadow-md shadow-[#8C5E2D]/20'
+                        : 'bg-white border-[#E8DFD5] text-[#332015] hover:bg-[#F5EFE6]'
                     }`}
                   >
                     {s.label}
@@ -157,31 +157,31 @@ export default function AiEstimator({ onSelectEstimate }) {
 
           {/* Results Summary Box */}
           <div className="lg:col-span-5">
-            <div className="glass-panel p-7 rounded-2xl border border-cyan-300/80 relative overflow-hidden bg-white shadow-xl">
+            <div className="glass-panel p-7 rounded-2xl border border-[#E8DFD5] relative overflow-hidden bg-white shadow-xl">
               <div className="flex items-center justify-between mb-6">
-                <span className="text-xs font-bold uppercase tracking-wider text-slate-500">
+                <span className="text-xs font-bold uppercase tracking-wider text-[#664E40]">
                   Projected AI Yield
                 </span>
-                <span className="px-2.5 py-1 rounded-full text-[11px] font-bold bg-cyan-100 text-cyan-800 border border-cyan-200">
+                <span className="px-2.5 py-1 rounded-full text-[11px] font-bold bg-[#F5EFE6] text-[#8C5E2D] border border-[#E8DFD5]">
                   25-Yr Enterprise Model
                 </span>
               </div>
 
-              <div className="text-sm font-semibold text-slate-600 mb-1">
+              <div className="text-sm font-semibold text-[#664E40] mb-1">
                 Target Architecture:
               </div>
-              <div className="text-2xl font-bold text-slate-900 font-['Space_Grotesk'] mb-6 text-cyan-800">
+              <div className="text-2xl font-bold text-[#26160C] font-['Cinzel'] mb-6">
                 {currentGoalTitle}
               </div>
 
               {/* Metrics Grid */}
               <div className="grid grid-cols-2 gap-4 mb-6">
-                <div className="bg-slate-50 p-4 rounded-xl border border-slate-200">
-                  <div className="flex items-center gap-1.5 text-xs text-slate-500 mb-1">
-                    <Clock className="w-3.5 h-3.5 text-cyan-600" />
+                <div className="bg-[#FAF7F2] p-4 rounded-xl border border-[#E8DFD5]">
+                  <div className="flex items-center gap-1.5 text-xs text-[#664E40] mb-1">
+                    <Clock className="w-3.5 h-3.5 text-[#8C5E2D]" />
                     <span>Hours Saved / Mo</span>
                   </div>
-                  <div className="text-2xl sm:text-3xl font-extrabold text-slate-900 font-['Space_Grotesk']">
+                  <div className="text-2xl sm:text-3xl font-extrabold text-[#26160C] font-['Cinzel']">
                     {currentResult.hours}+
                   </div>
                   <div className="text-[11px] text-emerald-700 font-semibold mt-1">
@@ -189,31 +189,31 @@ export default function AiEstimator({ onSelectEstimate }) {
                   </div>
                 </div>
 
-                <div className="bg-slate-50 p-4 rounded-xl border border-slate-200">
-                  <div className="flex items-center gap-1.5 text-xs text-slate-500 mb-1">
-                    <TrendingUp className="w-3.5 h-3.5 text-indigo-600" />
+                <div className="bg-[#FAF7F2] p-4 rounded-xl border border-[#E8DFD5]">
+                  <div className="flex items-center gap-1.5 text-xs text-[#664E40] mb-1">
+                    <TrendingUp className="w-3.5 h-3.5 text-[#8C5E2D]" />
                     <span>Velocity Gain</span>
                   </div>
-                  <div className="text-2xl sm:text-3xl font-extrabold text-indigo-700 font-['Space_Grotesk']">
+                  <div className="text-2xl sm:text-3xl font-extrabold text-[#8C5E2D] font-['Cinzel']">
                     {currentResult.multiplier}
                   </div>
-                  <div className="text-[11px] text-slate-500 font-medium mt-1">
+                  <div className="text-[11px] text-[#664E40] font-medium mt-1">
                     Faster time-to-market
                   </div>
                 </div>
               </div>
 
               {/* Deployment Details */}
-              <div className="space-y-3 p-4 rounded-xl bg-slate-50/80 border border-slate-200 mb-6">
+              <div className="space-y-3 p-4 rounded-xl bg-[#F5EFE6]/80 border border-[#E8DFD5] mb-6">
                 <div className="flex items-center justify-between text-xs">
-                  <span className="text-slate-500">Deployment Horizon:</span>
-                  <span className="font-bold text-slate-800">{currentResult.launchTime}</span>
+                  <span className="text-[#664E40]">Deployment Horizon:</span>
+                  <span className="font-bold text-[#26160C]">{currentResult.launchTime}</span>
                 </div>
-                <div className="pt-2 border-t border-slate-200">
-                  <span className="text-[11px] font-bold text-slate-600 block mb-1">
+                <div className="pt-2 border-t border-[#E8DFD5]">
+                  <span className="text-[11px] font-bold text-[#664E40] block mb-1">
                     Recommended Frontier Stack:
                   </span>
-                  <span className="text-xs text-cyan-800 font-mono font-semibold">
+                  <span className="text-xs text-[#8C5E2D] font-mono font-bold">
                     {currentResult.stack}
                   </span>
                 </div>
@@ -232,12 +232,12 @@ export default function AiEstimator({ onSelectEstimate }) {
                     });
                   }
                 }}
-                className="w-full flex items-center justify-center gap-2 py-3.5 px-6 rounded-xl font-bold text-sm text-white bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 shadow-lg shadow-cyan-600/25 transition-all group"
+                className="w-full flex items-center justify-center gap-2 py-3.5 px-6 rounded-xl font-bold text-sm text-white bg-gradient-to-r from-[#8C5E2D] via-[#A87944] to-[#734A1F] hover:from-[#734A1F] hover:to-[#523C1B] shadow-lg shadow-[#8C5E2D]/25 transition-all group"
               >
                 <span>Request Custom Architecture Plan</span>
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </a>
-              <p className="text-center text-[11px] text-slate-500 mt-3 font-medium">
+              <p className="text-center text-[11px] text-[#664E40] mt-3 font-medium">
                 Direct consultation with Founder Yasir Islam Butt (25+ Yrs Experience)
               </p>
             </div>

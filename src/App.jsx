@@ -57,7 +57,7 @@ export default function App() {
   }
 
   return (
-    <div className="min-h-screen bg-[#f8fafc] text-slate-800 flex flex-col font-sans">
+    <div className="min-h-screen bg-[#FAF7F2] text-[#332015] flex flex-col font-sans selection:bg-[#8C5E2D]/20 selection:text-[#26160C]">
       <Navbar onOpenDatabase={handleOpenDatabase} />
       <main className="flex-grow">
         <Hero />
