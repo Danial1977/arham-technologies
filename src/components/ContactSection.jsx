@@ -150,8 +150,8 @@ export default function ContactSection({ prefillData, onOpenDatabase }) {
                   </div>
                   <div>
                     <span className="text-xs text-[#664E40] block font-medium">Direct Inquiry</span>
-                    <a href="mailto:info@arhamtechnologies.com" className="text-sm font-bold text-[#26160C] hover:text-[#8C5E2D] transition-colors">
-                      info@arhamtechnologies.com
+                    <a href="mailto:ArhamTechnologiesLtd@gmail.com" className="text-sm font-bold text-[#26160C] hover:text-[#8C5E2D] transition-colors">
+                      ArhamTechnologiesLtd@gmail.com
                     </a>
                   </div>
                 </div>

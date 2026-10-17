@@ -52,7 +52,7 @@ export default function Footer({ onOpenDatabase }) {
                 <LinkedinIcon className="w-4 h-4 fill-current" />
               </a>
               <a
-                href="mailto:info@arhamtechnologies.com"
+                href="mailto:ArhamTechnologiesLtd@gmail.com"
                 className="w-9 h-9 rounded-lg bg-[#2A1D13] border border-[#3A2910] flex items-center justify-center text-[#D5C4A1] hover:text-white hover:border-[#8C5E2D] shadow-2xs transition-colors"
                 aria-label="Email"
               >
