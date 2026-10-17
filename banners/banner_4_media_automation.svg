@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <defs>
+    <radialGradient id="b4-bg" cx="60%" cy="40%" r="75%">
+      <stop offset="0%" stop-color="#2D180D"/>
+      <stop offset="50%" stop-color="#190D06"/>
+      <stop offset="100%" stop-color="#0E0602"/>
+    </radialGradient>
+    <linearGradient id="b4-gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#F3DCAC"/>
+      <stop offset="50%" stop-color="#C59A58"/>
+      <stop offset="100%" stop-color="#734B1D"/>
+    </linearGradient>
+    <linearGradient id="yt-red" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FF4D4D"/>
+      <stop offset="100%" stop-color="#990000"/>
+    </linearGradient>
+    <linearGradient id="fb-blue" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#4D94FF"/>
+      <stop offset="100%" stop-color="#004499"/>
+    </linearGradient>
+    <filter id="b4-glow">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <rect width="1920" height="1080" fill="url(#b4-bg)"/>
+
+  <!-- Matrix Grid -->
+  <g opacity="0.12" stroke="#C59A58" stroke-width="1">
+    <pattern id="b4-grid" width="80" height="80" patternUnits="userSpaceOnUse">
+      <path d="M 80 0 L 0 0 0 80" fill="none"/>
+      <circle cx="0" cy="0" r="2" fill="#C59A58"/>
+    </pattern>
+    <rect width="1920" height="1080" fill="url(#b4-grid)"/>
+  </g>
+
+  <!-- Studio Command Center Visuals -->
+  <!-- Floating Waveforms & Sound Spectrum -->
+  <g opacity="0.3" transform="translate(1000, 200)">
+    <path d="M0,200 Q150,50 300,200 T600,200 T900,200" fill="none" stroke="url(#b4-gold)" stroke-width="3" filter="url(#b4-glow)"/>
+    <path d="M0,220 Q120,320 280,180 T560,240 T840,190" fill="none" stroke="#FF4D4D" stroke-width="2" opacity="0.6"/>
+    <path d="M0,180 Q200,80 400,240 T700,160 T900,210" fill="none" stroke="#4D94FF" stroke-width="2" opacity="0.6"/>
+  </g>
+
+  <!-- Video Timeline Tracks in 3D perspective -->
+  <g transform="translate(880, 480) skewX(-15) scale(0.95)" opacity="0.85">
+    <!-- Timeline Header -->
+    <rect x="0" y="0" width="900" height="40" rx="8" fill="#24140B" stroke="#C59A58" stroke-width="1.5"/>
+    <text x="30" y="26" fill="#F3DCAC" font-family="monospace" font-size="14" letter-spacing="2">ARHAM AUTOMATED BROADCAST TIMELINE // 4K 60FPS SYNTHESIS</text>
+    <circle cx="850" cy="20" r="6" fill="#00FF66" filter="url(#b4-glow)"/>
+
+    <!-- Track 1: AI Scripting & Voice (ElevenLabs) -->
+    <g transform="translate(0, 55)">
+      <rect x="0" y="0" width="900" height="60" rx="8" fill="#1C0E07" stroke="#3D2214" stroke-width="1"/>
+      <rect x="30" y="10" width="220" height="40" rx="6" fill="url(#b4-gold)" opacity="0.85"/>
+      <text x="45" y="35" fill="#140803" font-family="sans-serif" font-weight="bold" font-size="13">LLM Script Engine v4.2</text>
+      <rect x="270" y="10" width="340" height="40" rx="6" fill="#734B1D" opacity="0.7"/>
+      <text x="285" y="35" fill="#F3DCAC" font-family="sans-serif" font-size="13">ElevenLabs Neural TTS Sync</text>
+      <rect x="630" y="10" width="240" height="40" rx="6" fill="url(#b4-gold)" opacity="0.5"/>
+    </g>
+
+    <!-- Track 2: Visual Generative Video (Remotion / FFmpeg) -->
+    <g transform="translate(0, 130)">
+      <rect x="0" y="0" width="900" height="60" rx="8" fill="#1C0E07" stroke="#3D2214" stroke-width="1"/>
+      <rect x="30" y="10" width="180" height="40" rx="6" fill="#990000" opacity="0.85"/>
+      <text x="45" y="35" fill="#FFF" font-family="sans-serif" font-weight="bold" font-size="13">B-Roll Synthesis</text>
+      <rect x="230" y="10" width="400" height="40" rx="6" fill="#331A0D" stroke="#C59A58" stroke-dasharray="4 4" stroke-width="1"/>
+      <text x="245" y="35" fill="#C59A58" font-family="monospace" font-size="13">GPU Cloud Composition (FFmpeg)</text>
+      <rect x="650" y="10" width="220" height="40" rx="6" fill="#004499" opacity="0.85"/>
+      <text x="665" y="35" fill="#FFF" font-family="sans-serif" font-weight="bold" font-size="13">Audio Ducking & FX</text>
+    </g>
+
+    <!-- Track 3: Automated Publishing Hub -->
+    <g transform="translate(0, 205)">
+      <rect x="0" y="0" width="900" height="60" rx="8" fill="#1C0E07" stroke="#3D2214" stroke-width="1"/>
+      <rect x="30" y="10" width="380" height="40" rx="6" fill="url(#yt-red)" filter="url(#b4-glow)"/>
+      <text x="50" y="35" fill="#FFF" font-family="sans-serif" font-weight="bold" font-size="14">▶ YouTube Studio API Auto-Schedule</text>
+      <rect x="430" y="10" width="440" height="40" rx="6" fill="url(#fb-blue)" filter="url(#b4-glow)"/>
+      <text x="450" y="35" fill="#FFF" font-family="sans-serif" font-weight="bold" font-size="14">f Meta Reels & Stories Webhook</text>
+    </g>
+
+    <!-- Playhead Needle -->
+    <line x1="320" y1="-20" x2="320" y2="280" stroke="#FFCC00" stroke-width="3" filter="url(#b4-glow)"/>
+    <polygon points="310,-20 330,-20 320,0" fill="#FFCC00"/>
+  </g>
+
+  <!-- Big Glowing Ambient Holographic Media Badges -->
+  <g transform="translate(1500, 140)" opacity="0.9">
+    <circle cx="60" cy="60" r="50" fill="url(#yt-red)" filter="url(#b4-glow)" opacity="0.8"/>
+    <polygon points="50,40 80,60 50,80" fill="#FFF"/>
+  </g>
+  <g transform="translate(1680, 230)" opacity="0.9">
+    <circle cx="50" cy="50" r="45" fill="url(#fb-blue)" filter="url(#b4-glow)" opacity="0.8"/>
+    <text x="35" y="66" fill="#FFF" font-family="sans-serif" font-size="48" font-weight="bold">f</text>
+  </g>
+
+  <!-- Metrics HUD Panel floating right -->
+  <g transform="translate(1420, 680)" opacity="0.92">
+    <rect width="400" height="240" rx="16" fill="#180C06" stroke="#C59A58" stroke-width="1.5"/>
+    <text x="30" y="45" fill="#C59A58" font-family="monospace" font-size="13" letter-spacing="2">AUTOMATION TELEMETRY</text>
+    <line x1="30" y1="60" x2="370" y2="60" stroke="#3D2214" stroke-width="1"/>
+    
+    <text x="30" y="105" fill="#FFF" font-family="sans-serif" font-size="32" font-weight="extrabold">4,280,000+</text>
+    <text x="30" y="130" fill="#C59A58" font-family="sans-serif" font-size="14">Monthly Video Views Generated</text>
+
+    <text x="30" y="180" fill="#00FF99" font-family="monospace" font-size="24" font-weight="bold">100% AUTONOMOUS</text>
+    <text x="30" y="205" fill="#A88B73" font-family="sans-serif" font-size="13">Zero Human Touchpoints Script-to-Upload</text>
+  </g>
+
+  <!-- Vignette -->
+  <rect width="1920" height="1080" fill="none" stroke="#24140B" stroke-width="20" opacity="0.5"/>
+</svg>
