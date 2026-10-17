@@ -88,15 +88,48 @@ export default function HeroCarousel() {
   ];
 
   // Banners visual backgrounds
+  // Banners visual backgrounds with SEO-optimized alt and title keywords
   const bannerBackgrounds = [
-    './banners/banner_1_claude_antigravity.jpg',
-    './banners/banner_2_tb_furniture.jpg',
-    './banners/banner_3_mybestdiscounts.jpg',
-    './banners/banner_4_media_automation.svg',
-    './banners/banner_5_ai_services.svg',
-    './banners/banner_6_erp_experience.svg',
-    './banners/banner_7_frontier_ai.svg',
-    './banners/banner_8_global_leadership.svg'
+    {
+      src: './banners/banner_1_claude_antigravity.jpg',
+      alt: 'Claude 3.7 and Google Antigravity Autonomous AI Multi-Agent Swarms Architecture - Arham Technologies',
+      title: 'Claude 3.7 & Google Antigravity Autonomous AI Architecture'
+    },
+    {
+      src: './banners/banner_2_tb_furniture.jpg',
+      alt: 'TB-Furnitures Luxury E-Commerce Portal Built on Next.js 15, Prisma ORM, and PostgreSQL - Arham Technologies',
+      title: 'TB-Furnitures Luxury E-Commerce Portal Flagship Architecture'
+    },
+    {
+      src: './banners/banner_3_mybestdiscounts.jpg',
+      alt: 'MyBestDiscounts.co.uk Retail Affiliate Aggregator Processing Millions of Live Products - Arham Technologies',
+      title: 'MyBestDiscounts.co.uk Retail Scraper & Discount Feed Matrix'
+    },
+    {
+      src: './banners/banner_4_media_automation.svg',
+      alt: 'Automated YouTube and Facebook AI Video Broadcast Studio & Syndication Engine - Arham Technologies',
+      title: 'Autonomous YouTube & Facebook Video Broadcast Studio'
+    },
+    {
+      src: './banners/banner_5_ai_services.svg',
+      alt: 'Full-Spectrum Enterprise AI Services, Kubernetes DevOps and Modern Tooling Matrix - Arham Technologies',
+      title: 'Full-Spectrum Enterprise AI Services & Modern Toolchain'
+    },
+    {
+      src: './banners/banner_6_erp_experience.svg',
+      alt: '25+ Years Enterprise IT Leadership, SAP S/4HANA and Oracle EBS ERP Consulting by Yasir Islam Butt',
+      title: '25+ Years Enterprise IT & ERP Modernization Heritage'
+    },
+    {
+      src: './banners/banner_7_frontier_ai.svg',
+      alt: 'Frontier AI Roadmap: Google VEO 3 Cinematic Generative Video and xAI Grok Real-Time Signal Ingestion',
+      title: 'Frontier Model Innovation: Google VEO 3 & xAI Grok'
+    },
+    {
+      src: './banners/banner_8_global_leadership.svg',
+      alt: 'Global Enterprise Delivery Standards for Top-Tier UK and USA Enterprises across London and Silicon Valley',
+      title: 'Global Enterprise Delivery Standards - London & Silicon Valley'
+    }
   ];
 
   return (
@@ -128,8 +161,11 @@ export default function HeroCarousel() {
               }`}
             >
               <img 
-                src={bg} 
-                alt={`Banner ${idx + 1} Visual Background`} 
+                src={bg.src} 
+                alt={bg.alt}
+                title={bg.title}
+                loading={idx === 0 ? "eager" : "lazy"}
+                decoding="async"
                 className="w-full h-full object-cover object-center"
               />
               {/* Dual-Tone Technical Overlay: Deep walnut on left for high-contrast readable text, atmospheric transparency on right */}
@@ -170,9 +206,9 @@ export default function HeroCarousel() {
                     <span className="flex h-2 w-2 rounded-full bg-[#00FF99] animate-pulse" />
                     <span>BANNER 1 OF 8 • Autonomous AI Core</span>
                   </div>
-                  <h2 className="text-lg sm:text-xl md:text-2xl lg:text-[34px] font-extrabold text-white leading-snug mb-3 font-['Cinzel'] tracking-tight drop-shadow-md">
-                    Engineering Autonomous Swarms with <span className="bg-gradient-to-r from-[#F5E2BE] via-[#D4A76A] to-[#805423] bg-clip-text text-transparent">Claude & Google Antigravity</span>
-                  </h2>
+                  <h1 className="text-lg sm:text-xl md:text-2xl lg:text-[34px] font-extrabold text-white leading-snug mb-3 font-['Cinzel'] tracking-tight drop-shadow-md">
+                    Autonomous AI Solutions & Swarms with <span className="bg-gradient-to-r from-[#F5E2BE] via-[#D4A76A] to-[#805423] bg-clip-text text-transparent">Claude & Google Antigravity</span>
+                  </h1>
                   <p className="text-sm sm:text-base text-[#E5D7CC] mb-6 leading-relaxed max-w-xl font-normal drop-shadow">
                     We architect production multi-agent swarms using Claude 3.7 Sonnet reasoning engines and Google Antigravity protocols, delivering self-healing CI/CD, deep research automation, and deterministic tool-calling pipelines.
                   </p>
@@ -256,7 +292,7 @@ export default function HeroCarousel() {
                     <span>BANNER 2 OF 8 • Flagship eCommerce Architecture</span>
                   </div>
                   <h2 className="text-lg sm:text-xl md:text-2xl lg:text-[34px] font-extrabold text-white leading-snug mb-3 font-['Cinzel'] tracking-tight drop-shadow-md">
-                    Next-Gen Luxury Retail: <span className="bg-gradient-to-r from-[#F5E2BE] via-[#D4A76A] to-[#805423] bg-clip-text text-transparent">TB-Furnitures Commerce Engine</span>
+                    Next-Gen Luxury Retail: <span className="bg-gradient-to-r from-[#F5E2BE] via-[#D4A76A] to-[#805423] bg-clip-text text-transparent">TB-Furnitures E-Commerce Engine</span>
                   </h2>
                   <p className="text-sm sm:text-base text-[#E5D7CC] mb-6 leading-relaxed max-w-xl font-normal drop-shadow">
                     Engineered from the ground up on Next.js 15, Prisma ORM, and PostgreSQL. Features dynamic discount matrices, real-time inventory synchronization, automated free-delivery logic, and sub-120ms global checkout.
@@ -335,7 +371,7 @@ export default function HeroCarousel() {
                     <span>BANNER 3 OF 8 • Scaled Affiliate Aggregation</span>
                   </div>
                   <h2 className="text-lg sm:text-xl md:text-2xl lg:text-[34px] font-extrabold text-white leading-snug mb-3 font-['Cinzel'] tracking-tight drop-shadow-md">
-                    MyBestDiscounts.co.uk: <span className="bg-gradient-to-r from-[#F5E2BE] via-[#D4A76A] to-[#805423] bg-clip-text text-transparent">Millions of Products Ingested</span>
+                    MyBestDiscounts.co.uk: <span className="bg-gradient-to-r from-[#F5E2BE] via-[#D4A76A] to-[#805423] bg-clip-text text-transparent">Millions of Retail Products Ingested</span>
                   </h2>
                   <p className="text-sm sm:text-base text-[#E5D7CC] mb-6 leading-relaxed max-w-xl font-normal drop-shadow">
                     High-volume UK retail aggregator processing over 2.4 Million live product feeds. Features automated scrapers, dynamic discount coupon validation, price drop detection, and real-time affiliate commission tracking.
@@ -416,7 +452,7 @@ export default function HeroCarousel() {
                     <span>BANNER 4 OF 8 • Automated Content Syndication</span>
                   </div>
                   <h2 className="text-lg sm:text-xl md:text-2xl lg:text-[34px] font-extrabold text-white leading-snug mb-3 font-['Cinzel'] tracking-tight drop-shadow-md">
-                    Autonomous <span className="bg-gradient-to-r from-[#F5E2BE] via-[#D4A76A] to-[#805423] bg-clip-text text-transparent">YouTube & Facebook Media</span> Broadcast Engines
+                    Autonomous <span className="bg-gradient-to-r from-[#F5E2BE] via-[#D4A76A] to-[#805423] bg-clip-text text-transparent">YouTube & Facebook Media Automation</span> Broadcast Engines
                   </h2>
                   <p className="text-sm sm:text-base text-[#E5D7CC] mb-6 leading-relaxed max-w-xl font-normal drop-shadow">
                     End-to-end programmatic media creation: scriptwriting with LLMs, voice synthesis with ElevenLabs, dynamic video rendering with FFmpeg/Remotion, and scheduled multi-platform publishing.
@@ -491,7 +527,7 @@ export default function HeroCarousel() {
                     <span>BANNER 5 OF 8 • Full-Spectrum Digital Engineering</span>
                   </div>
                   <h2 className="text-lg sm:text-xl md:text-2xl lg:text-[34px] font-extrabold text-white leading-snug mb-3 font-['Cinzel'] tracking-tight drop-shadow-md">
-                    Enterprise <span className="bg-gradient-to-r from-[#F5E2BE] via-[#D4A76A] to-[#805423] bg-clip-text text-transparent">AI Services & Modern Tooling</span> Ecosystem
+                    Full-Spectrum <span className="bg-gradient-to-r from-[#F5E2BE] via-[#D4A76A] to-[#805423] bg-clip-text text-transparent">Enterprise AI Services & Modern Tooling</span> Architecture
                   </h2>
                   <p className="text-sm sm:text-base text-[#E5D7CC] mb-6 leading-relaxed max-w-xl font-normal drop-shadow">
                     From autonomous agent infrastructure to enterprise cloud migration and media scaling, our delivery pipeline leverages the industry's most advanced toolchain.
@@ -572,7 +608,7 @@ export default function HeroCarousel() {
                     <span>BANNER 6 OF 8 • 25+ Years Enterprise IT Heritage</span>
                   </div>
                   <h2 className="text-lg sm:text-xl md:text-2xl lg:text-[34px] font-extrabold text-white leading-snug mb-3 font-['Cinzel'] tracking-tight drop-shadow-md">
-                    25+ Years Leadership in <span className="bg-gradient-to-r from-[#F5E2BE] via-[#D4A76A] to-[#805423] bg-clip-text text-transparent">Enterprise IT & Mission-Critical ERPs</span>
+                    25+ Years Leadership in <span className="bg-gradient-to-r from-[#F5E2BE] via-[#D4A76A] to-[#805423] bg-clip-text text-transparent">Enterprise IT Architecture & Tier-1 ERPs</span>
                   </h2>
                   <p className="text-sm sm:text-base text-[#E5D7CC] mb-6 leading-relaxed max-w-xl font-normal drop-shadow">
                     Founder & Chief Architect Yasir Islam Butt has spearheaded digital transformations across Oracle EBS, SAP S/4HANA, Microsoft Dynamics, and cloud-native enterprise migrations across the UK, USA, and global markets.
@@ -664,7 +700,7 @@ export default function HeroCarousel() {
                     <span>BANNER 7 OF 8 • Frontier Model Innovation</span>
                   </div>
                   <h2 className="text-lg sm:text-xl md:text-2xl lg:text-[34px] font-extrabold text-white leading-snug mb-3 font-['Cinzel'] tracking-tight drop-shadow-md">
-                    Next-Gen AI Roadmap: <span className="bg-gradient-to-r from-[#F5E2BE] via-[#D4A76A] to-[#805423] bg-clip-text text-transparent">Google VEO 3, Grok & Beyond</span>
+                    Frontier AI Roadmap: <span className="bg-gradient-to-r from-[#F5E2BE] via-[#D4A76A] to-[#805423] bg-clip-text text-transparent">Google VEO 3, xAI Grok & Beyond</span>
                   </h2>
                   <p className="text-sm sm:text-base text-[#E5D7CC] mb-6 leading-relaxed max-w-xl font-normal drop-shadow">
                     Deploy before your competitors do. We harness Google VEO 3 for high-frame-rate cinematic generative video, xAI Grok for zero-lag social pulse intelligence, and custom multimodal agent architectures.
@@ -741,7 +777,7 @@ export default function HeroCarousel() {
                     <span>BANNER 8 OF 8 • Transatlantic Enterprise Pedigree</span>
                   </div>
                   <h2 className="text-lg sm:text-xl md:text-2xl lg:text-[34px] font-extrabold text-white leading-snug mb-3 font-['Cinzel'] tracking-tight drop-shadow-md">
-                    Global Delivery Standards Trusted by <span className="bg-gradient-to-r from-[#F5E2BE] via-[#D4A76A] to-[#805423] bg-clip-text text-transparent">Top-Tier UK & USA Enterprises</span>
+                    Global Delivery Standards for <span className="bg-gradient-to-r from-[#F5E2BE] via-[#D4A76A] to-[#805423] bg-clip-text text-transparent">Premier UK & USA Fortune 500 Enterprises</span>
                   </h2>
                   <p className="text-sm sm:text-base text-[#E5D7CC] mb-6 leading-relaxed max-w-xl font-normal drop-shadow">
                     Decades of cross-continental delivery experience servicing FTSE 100 leaders, Fortune 500 corporations, and hyper-growth scaleups across London, Silicon Valley, and New York.

@@ -54,7 +54,7 @@ export default function Navbar({ onOpenDatabase }) {
             {/* Left Group: Logo with generous margin before nav */}
             <div className="flex items-center">
               {/* Logo */}
-              <a href="#" className="flex items-center gap-3 group shrink-0">
+              <a href="#" title="Arham Technologies - Autonomous AI Solutions & Enterprise Automation" aria-label="Arham Technologies - Autonomous AI Solutions & Enterprise Automation" className="flex items-center gap-3 group shrink-0">
                 <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-[#8C5E2D] via-[#B89F70] to-[#523C1B] p-[1.5px] shadow-md shadow-[#8C5E2D]/20 group-hover:shadow-[#8C5E2D]/35 transition-all duration-300">
                   <div className="w-full h-full bg-[#FAF7F2] rounded-[10px] flex items-center justify-center">
                     <Bot className="w-5 h-5 text-[#8C5E2D] group-hover:scale-110 transition-transform duration-300" />

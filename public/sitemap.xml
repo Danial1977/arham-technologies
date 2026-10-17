@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://www.arhamtechnologies.org/</loc>
+    <lastmod>2026-10-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://www.arhamtechnologies.org/banners/banner_1_claude_antigravity.jpg</image:loc>
+      <image:title>Claude 3.7 and Google Antigravity Autonomous Multi-Agent Swarms Architecture</image:title>
+      <image:caption>Autonomous AI Solutions and Multi-Agent Architecture by Arham Technologies</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.arhamtechnologies.org/banners/banner_2_tb_furniture.jpg</image:loc>
+      <image:title>TB-Furnitures Luxury E-Commerce Portal Architecture</image:title>
+      <image:caption>High-throughput Next.js 15, Prisma ORM, and real-time inventory synchronization</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.arhamtechnologies.org/banners/banner_3_mybestdiscounts.jpg</image:loc>
+      <image:title>MyBestDiscounts.co.uk Retail Affiliate Aggregator</image:title>
+      <image:caption>Processing over 2.4 Million live retail price feeds and automated scrapers</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.arhamtechnologies.org/#services</loc>
+    <lastmod>2026-10-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.arhamtechnologies.org/#estimator</loc>
+    <lastmod>2026-10-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.arhamtechnologies.org/#founder</loc>
+    <lastmod>2026-10-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.arhamtechnologies.org/#why-us</loc>
+    <lastmod>2026-10-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.arhamtechnologies.org/#contact</loc>
+    <lastmod>2026-10-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+</urlset>
