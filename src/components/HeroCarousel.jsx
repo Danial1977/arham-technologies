@@ -32,7 +32,7 @@ export default function HeroCarousel() {
   const touchEndX = useRef(0);
 
   const totalSlides = 8;
-  const slideDuration = 8000; // 8 seconds per slide
+  const slideDuration = 4000; // 4 seconds per slide
 
   useEffect(() => {
     if (!isPlaying) return;
@@ -876,7 +876,7 @@ export default function HeroCarousel() {
 
             <div className="flex items-center gap-2">
               <span className="text-[11px] font-mono text-[#8C5E2D] bg-[#8C5E2D]/10 px-2.5 py-0.5 rounded-full font-bold">
-                8s Auto-Rotation
+                4s Auto-Rotation
               </span>
             </div>
           </div>
