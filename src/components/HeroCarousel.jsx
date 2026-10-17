@@ -170,7 +170,7 @@ export default function HeroCarousel() {
                     <span className="flex h-2 w-2 rounded-full bg-[#00FF99] animate-pulse" />
                     <span>BANNER 1 OF 8 • Autonomous AI Core</span>
                   </div>
-                  <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-white leading-tight mb-4 font-['Cinzel'] tracking-tight drop-shadow-md">
+                  <h2 className="text-lg sm:text-xl md:text-2xl lg:text-[34px] font-extrabold text-white leading-snug mb-3 font-['Cinzel'] tracking-tight drop-shadow-md">
                     Engineering Autonomous Swarms with <span className="bg-gradient-to-r from-[#F5E2BE] via-[#D4A76A] to-[#805423] bg-clip-text text-transparent">Claude & Google Antigravity</span>
                   </h2>
                   <p className="text-sm sm:text-base text-[#E5D7CC] mb-6 leading-relaxed max-w-xl font-normal drop-shadow">
@@ -255,7 +255,7 @@ export default function HeroCarousel() {
                     <ShoppingBag className="w-3.5 h-3.5 text-[#D5B170]" />
                     <span>BANNER 2 OF 8 • Flagship eCommerce Architecture</span>
                   </div>
-                  <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-white leading-tight mb-4 font-['Cinzel'] tracking-tight drop-shadow-md">
+                  <h2 className="text-lg sm:text-xl md:text-2xl lg:text-[34px] font-extrabold text-white leading-snug mb-3 font-['Cinzel'] tracking-tight drop-shadow-md">
                     Next-Gen Luxury Retail: <span className="bg-gradient-to-r from-[#F5E2BE] via-[#D4A76A] to-[#805423] bg-clip-text text-transparent">TB-Furnitures Commerce Engine</span>
                   </h2>
                   <p className="text-sm sm:text-base text-[#E5D7CC] mb-6 leading-relaxed max-w-xl font-normal drop-shadow">
@@ -334,7 +334,7 @@ export default function HeroCarousel() {
                     <TrendingUp className="w-3.5 h-3.5 text-[#D5B170]" />
                     <span>BANNER 3 OF 8 • Scaled Affiliate Aggregation</span>
                   </div>
-                  <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-white leading-tight mb-4 font-['Cinzel'] tracking-tight drop-shadow-md">
+                  <h2 className="text-lg sm:text-xl md:text-2xl lg:text-[34px] font-extrabold text-white leading-snug mb-3 font-['Cinzel'] tracking-tight drop-shadow-md">
                     MyBestDiscounts.co.uk: <span className="bg-gradient-to-r from-[#F5E2BE] via-[#D4A76A] to-[#805423] bg-clip-text text-transparent">Millions of Products Ingested</span>
                   </h2>
                   <p className="text-sm sm:text-base text-[#E5D7CC] mb-6 leading-relaxed max-w-xl font-normal drop-shadow">
@@ -415,7 +415,7 @@ export default function HeroCarousel() {
                     <Film className="w-3.5 h-3.5 text-[#D5B170]" />
                     <span>BANNER 4 OF 8 • Automated Content Syndication</span>
                   </div>
-                  <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-white leading-tight mb-4 font-['Cinzel'] tracking-tight drop-shadow-md">
+                  <h2 className="text-lg sm:text-xl md:text-2xl lg:text-[34px] font-extrabold text-white leading-snug mb-3 font-['Cinzel'] tracking-tight drop-shadow-md">
                     Autonomous <span className="bg-gradient-to-r from-[#F5E2BE] via-[#D4A76A] to-[#805423] bg-clip-text text-transparent">YouTube & Facebook Media</span> Broadcast Engines
                   </h2>
                   <p className="text-sm sm:text-base text-[#E5D7CC] mb-6 leading-relaxed max-w-xl font-normal drop-shadow">
@@ -490,7 +490,7 @@ export default function HeroCarousel() {
                     <Cpu className="w-3.5 h-3.5 text-[#D5B170]" />
                     <span>BANNER 5 OF 8 • Full-Spectrum Digital Engineering</span>
                   </div>
-                  <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-white leading-tight mb-4 font-['Cinzel'] tracking-tight drop-shadow-md">
+                  <h2 className="text-lg sm:text-xl md:text-2xl lg:text-[34px] font-extrabold text-white leading-snug mb-3 font-['Cinzel'] tracking-tight drop-shadow-md">
                     Enterprise <span className="bg-gradient-to-r from-[#F5E2BE] via-[#D4A76A] to-[#805423] bg-clip-text text-transparent">AI Services & Modern Tooling</span> Ecosystem
                   </h2>
                   <p className="text-sm sm:text-base text-[#E5D7CC] mb-6 leading-relaxed max-w-xl font-normal drop-shadow">
@@ -571,7 +571,7 @@ export default function HeroCarousel() {
                     <Award className="w-3.5 h-3.5 text-[#D5B170]" />
                     <span>BANNER 6 OF 8 • 25+ Years Enterprise IT Heritage</span>
                   </div>
-                  <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-white leading-tight mb-4 font-['Cinzel'] tracking-tight drop-shadow-md">
+                  <h2 className="text-lg sm:text-xl md:text-2xl lg:text-[34px] font-extrabold text-white leading-snug mb-3 font-['Cinzel'] tracking-tight drop-shadow-md">
                     25+ Years Leadership in <span className="bg-gradient-to-r from-[#F5E2BE] via-[#D4A76A] to-[#805423] bg-clip-text text-transparent">Enterprise IT & Mission-Critical ERPs</span>
                   </h2>
                   <p className="text-sm sm:text-base text-[#E5D7CC] mb-6 leading-relaxed max-w-xl font-normal drop-shadow">
@@ -663,7 +663,7 @@ export default function HeroCarousel() {
                     <Sparkles className="w-3.5 h-3.5 text-[#D5B170]" />
                     <span>BANNER 7 OF 8 • Frontier Model Innovation</span>
                   </div>
-                  <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-white leading-tight mb-4 font-['Cinzel'] tracking-tight drop-shadow-md">
+                  <h2 className="text-lg sm:text-xl md:text-2xl lg:text-[34px] font-extrabold text-white leading-snug mb-3 font-['Cinzel'] tracking-tight drop-shadow-md">
                     Next-Gen AI Roadmap: <span className="bg-gradient-to-r from-[#F5E2BE] via-[#D4A76A] to-[#805423] bg-clip-text text-transparent">Google VEO 3, Grok & Beyond</span>
                   </h2>
                   <p className="text-sm sm:text-base text-[#E5D7CC] mb-6 leading-relaxed max-w-xl font-normal drop-shadow">
@@ -740,7 +740,7 @@ export default function HeroCarousel() {
                     <ShieldCheck className="w-3.5 h-3.5 text-[#D5B170]" />
                     <span>BANNER 8 OF 8 • Transatlantic Enterprise Pedigree</span>
                   </div>
-                  <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-white leading-tight mb-4 font-['Cinzel'] tracking-tight drop-shadow-md">
+                  <h2 className="text-lg sm:text-xl md:text-2xl lg:text-[34px] font-extrabold text-white leading-snug mb-3 font-['Cinzel'] tracking-tight drop-shadow-md">
                     Global Delivery Standards Trusted by <span className="bg-gradient-to-r from-[#F5E2BE] via-[#D4A76A] to-[#805423] bg-clip-text text-transparent">Top-Tier UK & USA Enterprises</span>
                   </h2>
                   <p className="text-sm sm:text-base text-[#E5D7CC] mb-6 leading-relaxed max-w-xl font-normal drop-shadow">
