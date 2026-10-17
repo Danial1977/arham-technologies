@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
-import Hero from './components/Hero';
+import HeroCarousel from './components/HeroCarousel';
 import TechStackTicker from './components/TechStackTicker';
 import ServicesSection from './components/ServicesSection';
 import AiEstimator from './components/AiEstimator';
@@ -60,7 +60,7 @@ export default function App() {
     <div className="min-h-screen bg-[#FAF7F2] text-[#332015] flex flex-col font-sans selection:bg-[#8C5E2D]/20 selection:text-[#26160C]">
       <Navbar onOpenDatabase={handleOpenDatabase} />
       <main className="flex-grow">
-        <Hero />
+        <HeroCarousel />
         <TechStackTicker />
         <ServicesSection />
         <AiEstimator onSelectEstimate={handleSelectEstimate} />
